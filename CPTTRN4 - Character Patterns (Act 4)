@@ -63,9 +63,7 @@ int main() {
 		{
 			for(int j=0;j<(c+1)+(w*c);j++)
 			{
-				if(i==0 || i==l+h*l || j==0 || j==c+w*c)
-				cout<<"*";
-				else if(i%(h+1)==0 || j%(w+1)==0)
+				if(i%(h+1)==0 || j%(w+1)==0)
 				cout<<"*";
 				else
 				cout<<".";

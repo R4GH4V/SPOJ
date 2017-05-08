@@ -1,0 +1,78 @@
+*/Using two characters: . (dot) and * (asterisk) print a grid-like pattern.
+
+Input
+
+You are given t - the number of test cases and for each of the test cases four positive integers: l - the number of lines, c - the number of columns in the grid; h and w - the high and the with of the single rectangle.
+
+Output
+
+For each of the test cases output the requested pattern (please have a look at the example). Use one line break in between successive patterns.
+
+Example
+
+Input:
+3
+3 1 2 1
+4 4 1 2
+2 5 2 2
+
+Output:
+***
+*.*
+*.*
+***
+*.*
+*.*
+***
+*.*
+*.*
+***
+
+*************
+*..*..*..*..*
+*************
+*..*..*..*..*
+*************
+*..*..*..*..*
+*************
+*..*..*..*..*
+*************
+
+****************
+*..*..*..*..*..*
+*..*..*..*..*..*
+****************
+*..*..*..*..*..*
+*..*..*..*..*..*
+****************
+
+*/
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	// your code goes here
+	int t,l,c,h,w;
+	cin>>t;
+	while(t--)
+	{
+		cin>>l>>c>>h>>w;
+		for(int i=0;i<(l+1)+(h*l);i++)
+		{
+			for(int j=0;j<(c+1)+(w*c);j++)
+			{
+				if(i==0 || i==l+h*l || j==0 || j==c+w*c)
+				cout<<"*";
+				else if(i%(h+1)==0 || j%(w+1)==0)
+				cout<<"*";
+				else
+				cout<<".";
+			}
+			cout<<endl;
+		}
+		cout<<endl;
+	}
+	return 0;
+}

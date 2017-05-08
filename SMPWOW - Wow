@@ -1,0 +1,39 @@
+/*
+Input
+
+Given a positive integer 0 < x < 50.
+
+Output
+
+Print one word: Wo...ow (letter o must be repeted x times).
+
+Example 1
+
+Input:
+1
+
+Output:
+Wow
+Example 2
+
+Input:
+7
+
+Output:
+Wooooooow
+
+*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int x;
+	cin>>x;
+	cout<<"W";
+	for(int i=0;i<x;i++)
+	cout<<"o";
+	cout<<"w";
+	return 0;
+}
